@@ -26,11 +26,38 @@ openssl dgst -sha256 eosio.system/eosio.system.abi
 SHA256(eosio.system/eosio.system.abi)= 658918579a218447ee4117e25ee124a49e94cad8dc1ab53411c12ef5ce3da64c
 ```
 
-## Deploy eosio.system contract
+#### eosio.token:
 
-### Prepare deploy transaction and propose
+```
+openssl dgst eosio.token/eosio.token.wasm
+SHA256(eosio.token/eosio.token.wasm)= f6a2939074d69fc194d4b7b5a4d2c24e2766046ddeaa58b63ddfd579a0193623
+```
 
-generate set code&abi transaction:
+```
+openssl dgst eosio.token/eosio.token.abi
+SHA256(eosio.token/eosio.token.abi)= 358aaa14364f5a8726b22a0b24dbd2ba3bd8ff3be9f1604e0f33a4cd709416f0
+```
+
+#### eosio.msig:
+
+```
+openssl dgst eosio.msig/eosio.msig.wasm
+SHA256(eosio.msig/eosio.msig.wasm)= 07e77ebac8d32df58cc182bcfee218a93ccefb2838f23a8ed1593830d98d90db
+```
+
+```
+openssl dgst eosio.msig/eosio.msig.abi
+SHA256(eosio.msig/eosio.msig.abi)= 25c3b222606962cf0dca3f66988c0d539111c0c44e19debdbaace34e47dce3b6
+```
+
+
+## Deploy eosio.system/eosio.token/eosio.msig contracts
+
+### Prepare transaction
+
+Take eosio.system for example:
+
+Generate set code&abi transaction:
 
 ```
 cleos -u https://api-kylin.eoslaomao.com set contract eosio eosio.system -p eosio -s -j -d > deploy_system.json
@@ -73,8 +100,31 @@ Update expiration to a future time, set `ref_block_num` and `ref_block_prefix` t
 }
 ```
 
-We have proposed this transaction on Kylin Testnet : [https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploy1seven](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploy1seven), please review and verify ASAP. 
+Use the same approach above to generate transaction payload for eosio.token and eosio.msig.
+
+We have proposed to deplpy eosio.system, eosio.token and eosio.msig contracts on Kylin Testnet, please review and verify ASAP. 
+
+1. deploy eosio.system proposal:
+
+[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploy1seven](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploy1seven)
 
 ```
 cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom deploy1seven
+```
+
+
+2. deploy eosio.token proposal:
+
+[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploytoken](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploytoken)
+
+```
+cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom deploytoken
+```
+
+3. deploy eosio.msig proposal:
+
+[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploymsig](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploymsig)
+
+```
+cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom deploymsig
 ```
