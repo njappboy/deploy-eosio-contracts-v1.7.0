@@ -8,7 +8,7 @@
 
 Use [eosio.cdt 1.6.1]([https://github.com/EOSIO/eosio.cdt/tree/v1.6.1](https://github.com/EOSIO/eosio.cdt/tree/v1.6.1)) and [eosio 1.8.0](https://github.com/EOSIO/eos/tree/v1.8.0) to build [eosio.contracts v1.7.0](https://github.com/EOSIO/eosio.contracts/tree/v1.7.0) smart contract.
 
-Note: eosio.contracts v.17.0 introduced [ricardian-spec v0.2.0](https://github.com/EOSIO/ricardian-spec/tree/v0.2.0) which adds logos in action ricardian contracts. along with this release, BlockOne team provided default logos for system contract actions under MIT license. In order to build an abi with accessible action icon url, you need to specify ICON_BASE_URL in contracts/CMakeLists.txt. 
+Note: eosio.contracts v.1.7.0 introduced [ricardian-spec v0.2.0](https://github.com/EOSIO/ricardian-spec/tree/v0.2.0) which adds icon support in action ricardian clause. Along with this release, BlockOne team also provided default icons for system contract actions under MIT license. In order to build an abi with accessible action icon url, you need to specify ICON_BASE_URL in contracts/CMakeLists.txt. 
 
 in our case, we use http://ricardian-icons.cryptokylin.io/ as ICON_BASE_URL to build.
 
@@ -100,7 +100,7 @@ Update expiration to a future time, set `ref_block_num` and `ref_block_prefix` t
 }
 ```
 
-Use the same approach above to generate transaction payload for eosio.token and eosio.msig.
+Use the same approach above to generate transaction payload for eosio.token and eosio.msig. Don't forget to use eosio.token and eosio.msig for authority instead.
 
 We have proposed to deplpy eosio.system, eosio.token and eosio.msig contracts on Kylin Testnet, please review and verify ASAP. 
 
