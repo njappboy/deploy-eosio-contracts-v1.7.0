@@ -12,9 +12,7 @@ We use [eosio.cdt 1.6.2](https://github.com/EOSIO/eosio.cdt/tree/v1.6.1) and [eo
 
 eosio.contracts `v.1.7.0` introduced [ricardian-spec v0.2.0](https://github.com/EOSIO/ricardian-spec/tree/v0.2.0) which adds icon support in action ricardian clause. Along with this release, BlockOne team has also provided default icons for system contract actions under MIT license. In order to build an abi with accessible action icon url, you need to specify ICON_BASE_URL in contracts/CMakeLists.txt. 
 
-in this case, we use `https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons` as ICON_BASE_URL to build. 
-
-Note: [eosio-ricardian-icons](https://github.com/cryptokylin/eosio-ricardian-icons) is a repo maintained by CryptoKylin testnet developer group, aiming to serve icons in system contracts specifically. All icons are identical to the ones released in `eosio.contracts v1.7.0`.
+in this case, we use `https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons` as ICON_BASE_URL to build. 
 
 
 ### 2. Prepare Ricardian Clauses
