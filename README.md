@@ -21,6 +21,8 @@ Prepare ricardian caluses to make sure regproducer RC and EUA matches the ones o
 
 The EUA section is taken from [EOS-Mainnet governance repo](https://github.com/EOS-Mainnet/governance/blob/master/eosio.system/eosio.system-clause-constitution-rc.md) and regproducer RC from [EOS42/regproduceupodate](https://github.com/eos42/regproduceupodate) 
 
+For other actions' RC, v1.7.0 release has a slight wording change, for details please refer to: https://github.com/EOSIO/eosio.contracts/tree/v1.7.0
+
 You can find the v1.7.0 contract with RC updated here: [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/mainnet/v1.7.0/) Please verify it accordingly.
 
 
