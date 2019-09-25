@@ -1,53 +1,79 @@
 
-# Deploy eosio.contracts v1.7.0 on Kylin Testnet
+# Deploy eosio.contracts v1.7.0 on EOS Mainnet
 
 
 ## Prerequisites
 
-### 1. Build contracts
+### 1. Prerequisites before building contracts
 
-Use [eosio.cdt 1.6.1]([https://github.com/EOSIO/eosio.cdt/tree/v1.6.1](https://github.com/EOSIO/eosio.cdt/tree/v1.6.1)) and [eosio 1.8.0](https://github.com/EOSIO/eos/tree/v1.8.0) to build [eosio.contracts v1.7.0](https://github.com/EOSIO/eosio.contracts/tree/v1.7.0) smart contract.
+Use [eosio.cdt 1.6.2]([https://github.com/EOSIO/eosio.cdt/tree/v1.6.2](https://github.com/EOSIO/eosio.cdt/tree/v1.6.1)) and [eosio 1.8.3](https://github.com/EOSIO/eos/tree/v1.8.3) to build [eosio.contracts v1.7.0](https://github.com/EOSIO/eosio.contracts/tree/v1.7.0) smart contract.
 
-Note: eosio.contracts v.1.7.0 introduced [ricardian-spec v0.2.0](https://github.com/EOSIO/ricardian-spec/tree/v0.2.0) which adds icon support in action ricardian clause. Along with this release, BlockOne team also provided default icons for system contract actions under MIT license. In order to build an abi with accessible action icon url, you need to specify ICON_BASE_URL in contracts/CMakeLists.txt. 
 
-in our case, we use http://ricardian-icons.cryptokylin.io/ as ICON_BASE_URL to build.
+#### 1.1 Prepare ICON_BASE_URL to serve action logos
 
-#### Checksums:
+eosio.contracts `v.1.7.0` introduced [ricardian-spec v0.2.0](https://github.com/EOSIO/ricardian-spec/tree/v0.2.0) which adds icon support in action ricardian clause. Along with this release, BlockOne team has also provided default icons for system contract actions under MIT license. In order to build an abi with accessible action icon url, you need to specify ICON_BASE_URL in contracts/CMakeLists.txt. 
 
-##### eosio.system:
+in this case, we use `https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons` as ICON_BASE_URL to build. 
 
-```
-openssl dgst -sha256 eosio.system/eosio.system.wasm
-SHA256(eosio.system/eosio.system.wasm)= 6fcd8ef118799f21156acb0e24bcbd66d1dde40e5038fea938aa6cb03ed1505e
-```
+Note: `eosio-ricardian-icons` is a repo maintained by CryptoKylin testnet developer group.
 
-```
-openssl dgst -sha256 eosio.system/eosio.system.abi
-SHA256(eosio.system/eosio.system.abi)= 658918579a218447ee4117e25ee124a49e94cad8dc1ab53411c12ef5ce3da64c
-```
 
-#### eosio.token:
+#### 1.2 Prepare Ricardian Clauses
 
-```
-openssl dgst eosio.token/eosio.token.wasm
-SHA256(eosio.token/eosio.token.wasm)= f6a2939074d69fc194d4b7b5a4d2c24e2766046ddeaa58b63ddfd579a0193623
-```
+Prepare ricardian caluses to make sure regproducer RC and EUA matches the ones on EOS Mainnet. You can find it in file: [contracts/eosio.system/ricardian/eosio.system.clauses.md](https://github.com/EOSLaoMao/eosio.contracts/blob/mainnet/v1.7.0/contracts/eosio.system/ricardian/eosio.system.clauses.md) The EUA section is taken from [EOS-Mainnet governance repo](https://github.com/EOS-Mainnet/governance/blob/master/eosio.system/eosio.system-clause-constitution-rc.md) and regproducer RC from [EOS42/regproduceupodate](https://github.com/eos42/regproduceupodate) 
 
-```
-openssl dgst eosio.token/eosio.token.abi
-SHA256(eosio.token/eosio.token.abi)= 358aaa14364f5a8726b22a0b24dbd2ba3bd8ff3be9f1604e0f33a4cd709416f0
-```
+You can find an v1.7.0 contract with RC updated here: [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/mainnet/v1.7.0/) Please verify it accordingly.
 
-#### eosio.msig:
 
-```
-openssl dgst eosio.msig/eosio.msig.wasm
-SHA256(eosio.msig/eosio.msig.wasm)= 07e77ebac8d32df58cc182bcfee218a93ccefb2838f23a8ed1593830d98d90db
-```
+
+### 2.Build and verify checksums:
+
+##### Build:
+
+clone [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/mainnet/v1.7.0/) and build:
+
+`./build.sh -c [eosio.cdt Path] -e [eosio Path]`
+
+##### Verify checksums:
+
+You can verify the build result under `build` folder once build succeed.
+
+We have put our build under `contracts/1.7.0` for your review, here are checksums we got:
+
+###### eosio.system:
 
 ```
-openssl dgst eosio.msig/eosio.msig.abi
-SHA256(eosio.msig/eosio.msig.abi)= 25c3b222606962cf0dca3f66988c0d539111c0c44e19debdbaace34e47dce3b6
+openssl dgst -sha256 contracts/1.7.0/eosio.system/eosio.system.wasm
+SHA256(contracts/1.7.0/eosio.system/eosio.system.wasm)= 2b10316f971a99ea99079a2104ddc95cc1bae2cddce80088e3c885875d82ac21
+```
+
+```
+openssl dgst -sha256 contracts/1.7.0/eosio.system/eosio.system.abi
+SHA256(contracts/1.7.0/eosio.system/eosio.system.abi)= ec59e8302839d3d161cc8d203eb5216dcacbd2ea29aae2788ccb7f6ff4596c92
+```
+
+###### eosio.token:
+
+```
+openssl dgst -sha256 contracts/1.7.0/eosio.token/eosio.token.wasm
+SHA256(contracts/1.7.0/eosio.token/eosio.token.wasm)= f6a2939074d69fc194d4b7b5a4d2c24e2766046ddeaa58b63ddfd579a0193623
+```
+
+```
+openssl dgst -sha256 contracts/1.7.0/eosio.token/eosio.token.abi
+SHA256(contracts/1.7.0/eosio.token/eosio.token.abi)= 7ed892bbcd7dda2adde2e67e5a43e548530d40c0d7c86f1c950941d391aea7a9
+```
+
+###### eosio.msig:
+
+```
+openssl dgst -sha256 contracts/1.7.0/eosio.msig/eosio.msig.wasm
+SHA256(contracts/1.7.0/eosio.msig/eosio.msig.wasm)= 70fe82b6a8302eba5ce4fe50083abe0d465201d8c0a2f8a3a4c4c092fb0a6570
+```
+
+```
+openssl dgst -sha256 contracts/1.7.0/eosio.msig/eosio.msig.abi
+SHA256(contracts/1.7.0/eosio.msig/eosio.msig.abi)= 3483d8eff9842efdd323d4a198c10c24429a51d656d2669ff83de77511869679
 ```
 
 
@@ -60,14 +86,14 @@ Take eosio.system for example:
 Generate set code&abi transaction:
 
 ```
-cleos -u https://api-kylin.eoslaomao.com set contract eosio eosio.system -p eosio -s -j -d > deploy_system.json
+cleos -u https://api.eoslaomao.com set contract eosio contracts/1.7.0/eosio.system -p eosio -s -j -d > deploy_system.json
 ```
 
 Update expiration to a future time, set `ref_block_num` and `ref_block_prefix` to 0, you will get a transaction like this:
 
 ```
 {
-  "expiration": "2019-07-19T07:28:47",
+  "expiration": "2019-10-19T07:28:47",
   "ref_block_num": 0,
   "ref_block_prefix": 0,
   "max_net_usage_words": 0,
@@ -99,32 +125,38 @@ Update expiration to a future time, set `ref_block_num` and `ref_block_prefix` t
   "context_free_data": []
 }
 ```
-
 Use the same approach above to generate transaction payload for eosio.token and eosio.msig. Don't forget to use eosio.token and eosio.msig for authority instead.
 
-We have proposed to deplpy eosio.system, eosio.token and eosio.msig contracts on Kylin Testnet, please review and verify ASAP. 
+### Prepare Block Producer permission list
 
-1. deploy eosio.system proposal:
-
-[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploy1seven](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploy1seven)
-
-```
-cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom deploy1seven
-```
+We have included top 30 BPs + some highly recoginized technical BPs among the community in our proposals, you can find the full list here in file `producer_perm.json`.
 
 
-2. deploy eosio.token proposal:
+### Propose
 
-[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploytoken](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploytoken)
+We have proposed to deplpy eosio.system, eosio.token and eosio.msig contracts on EOS Mainnet, please review and verify.
+
+1. Proposal to deploy eosio.system:
+
+[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys)
 
 ```
-cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom deploytoken
+cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom 1sevensys
 ```
 
-3. deploy eosio.msig proposal:
 
-[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploymsig](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=deploymsig)
+2. Proposal to deploy eosio.token:
+
+[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1seventoken](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1seventoken)
 
 ```
-cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom deploymsig
+cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom 1seventoken
+```
+
+3. Proposal to deploy eosio.msig:
+
+[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevenmsig](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevenmsig)
+
+```
+cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom 1sevenmsig
 ```
