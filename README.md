@@ -47,7 +47,7 @@ openssl dgst -sha256 contracts/1.7.0/eosio.system/eosio.system.wasm
 SHA256(contracts/1.7.0/eosio.system/eosio.system.wasm)= 2b10316f971a99ea99079a2104ddc95cc1bae2cddce80088e3c885875d82ac21
 
 openssl dgst -sha256 contracts/1.7.0/eosio.system/eosio.system.abi
-SHA256(contracts/1.7.0/eosio.system/eosio.system.abi)= ec59e8302839d3d161cc8d203eb5216dcacbd2ea29aae2788ccb7f6ff4596c92
+SHA256(contracts/1.7.0/eosio.system/eosio.system.abi)= d4c0c47784247f7aac6515b9a01e3a5f8280a5e6f5d8e12cb17e22f71b61eb4f
 ```
 
 ##### eosio.token:
@@ -57,7 +57,7 @@ openssl dgst -sha256 contracts/1.7.0/eosio.token/eosio.token.wasm
 SHA256(contracts/1.7.0/eosio.token/eosio.token.wasm)= f6a2939074d69fc194d4b7b5a4d2c24e2766046ddeaa58b63ddfd579a0193623
 
 openssl dgst -sha256 contracts/1.7.0/eosio.token/eosio.token.abi
-SHA256(contracts/1.7.0/eosio.token/eosio.token.abi)= 7ed892bbcd7dda2adde2e67e5a43e548530d40c0d7c86f1c950941d391aea7a9
+SHA256(contracts/1.7.0/eosio.token/eosio.token.abi)= 7ad6d6ac8bed6d412b3ce9eb629c4ecc587607a63f1eae5980e5f6c86a479e34
 ```
 
 ##### eosio.msig:
@@ -67,7 +67,7 @@ openssl dgst -sha256 contracts/1.7.0/eosio.msig/eosio.msig.wasm
 SHA256(contracts/1.7.0/eosio.msig/eosio.msig.wasm)= 70fe82b6a8302eba5ce4fe50083abe0d465201d8c0a2f8a3a4c4c092fb0a6570
 
 openssl dgst -sha256 contracts/1.7.0/eosio.msig/eosio.msig.abi
-SHA256(contracts/1.7.0/eosio.msig/eosio.msig.abi)= 3483d8eff9842efdd323d4a198c10c24429a51d656d2669ff83de77511869679
+SHA256(contracts/1.7.0/eosio.msig/eosio.msig.abi)= b9192fe8ab8d7851b3f5ff3d2efea8b829b726300fda2cd43170d7ee3d4c62b0
 ```
 
 
