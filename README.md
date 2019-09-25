@@ -138,25 +138,25 @@ We have proposed to deplpy eosio.system, eosio.token and eosio.msig contracts on
 
 1. Proposal to deploy eosio.system:
 
-[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys)
+[https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys](https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys)
 
 ```
-cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom 1sevensys
+cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1sevensys
 ```
 
 
 2. Proposal to deploy eosio.token:
 
-[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1seventoken](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1seventoken)
+[https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1seventoken](https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1seventoken)
 
 ```
-cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom 1seventoken
+cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1seventoken
 ```
 
 3. Proposal to deploy eosio.msig:
 
-[https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevenmsig](https://kylin.eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevenmsig)
+[https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevenmsig](https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevenmsig)
 
 ```
-cleos -u https://api-kylin.eoslaomao.com multisig review eoslaomaocom 1sevenmsig
+cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1sevenmsig
 ```
