@@ -4,7 +4,7 @@
 spec_version: "0.2.0"
 title: Activate Protocol Feature
 summary: 'Activate protocol feature {{nowrap feature_digest}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} activates the protocol feature with a digest of {{feature_digest}}.
@@ -15,7 +15,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Cancel Delayed Transaction
 summary: '{{nowrap canceling_auth.actor}} cancels a delayed transaction'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{canceling_auth.actor}} cancels the delayed transaction with id {{trx_id}}.
@@ -26,7 +26,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Delete Account Permission
 summary: 'Delete the {{nowrap permission}} permission of {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Delete the {{permission}} permission of {{account}}.
@@ -37,7 +37,7 @@ Delete the {{permission}} permission of {{account}}.
 spec_version: "0.2.0"
 title: Link Action to Permission
 summary: '{{nowrap account}} sets the minimum required permission for the {{#if type}}{{nowrap type}} action of the{{/if}} {{nowrap code}} contract to {{nowrap requirement}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{account}} sets the minimum required permission for the {{#if type}}{{type}} action of the{{/if}} {{code}} contract to {{requirement}}.
@@ -50,7 +50,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Create New Account
 summary: '{{nowrap creator}} creates a new account with the name {{nowrap name}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{creator}} creates a new account with the name {{name}} and the following permissions:
@@ -67,7 +67,7 @@ active permission with authority:
 spec_version: "0.2.0"
 title: Assert Protocol Feature Activation
 summary: 'Assert that protocol feature {{nowrap feature_digest}} has been activated'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 Assert that the protocol feature with a digest of {{feature_digest}} has been activated.
@@ -78,7 +78,7 @@ Assert that the protocol feature with a digest of {{feature_digest}} has been ac
 spec_version: "0.2.0"
 title: Assert Authorization
 summary: 'Assert that authorization by {{nowrap from}} is provided'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Assert that authorization by {{from}} is provided.
@@ -89,7 +89,7 @@ Assert that authorization by {{from}} is provided.
 spec_version: "0.2.0"
 title: Deploy Contract ABI
 summary: 'Deploy contract ABI on account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Deploy the ABI file associated with the contract on account {{account}}.
@@ -100,7 +100,7 @@ Deploy the ABI file associated with the contract on account {{account}}.
 spec_version: "0.2.0"
 title: Adjust Resource Limits of Account
 summary: 'Adjust resource limits of account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} updates {{account}}’s resource limits to have a RAM quota of {{ram_bytes}} bytes, a NET bandwidth quota of {{net_weight}} and a CPU bandwidth quota of {{cpu_weight}}.
@@ -111,7 +111,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Deploy Contract Code
 summary: 'Deploy contract code on account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Deploy compiled contract code to the account {{account}}.
@@ -122,7 +122,7 @@ Deploy compiled contract code to the account {{account}}.
 spec_version: "0.2.0"
 title: Set System Parameters
 summary: 'Set system parameters'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} sets system parameters to:
@@ -134,7 +134,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Make an Account Privileged or Unprivileged
 summary: '{{#if is_priv}}Make {{nowrap account}} privileged{{else}}Remove privileged status of {{nowrap account}}{{/if}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{#if is_priv}}
@@ -149,7 +149,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Set Block Producers
 summary: 'Set block producer schedule'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} proposes a block producer schedule of:
@@ -163,7 +163,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Unlink Action from Permission
 summary: '{{nowrap account}} unsets the minimum required permission for the {{#if type}}{{nowrap type}} action of the{{/if}} {{nowrap code}} contract'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{account}} removes the association between the {{#if type}}{{type}} action of the{{/if}} {{code}} contract and its minimum required permission.
@@ -176,7 +176,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Modify Account Permission
 summary: 'Add or update the {{nowrap permission}} permission of {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Modify, and create if necessary, the {{permission}} permission of {{account}} to have a parent permission of {{parent}} and the following authority:

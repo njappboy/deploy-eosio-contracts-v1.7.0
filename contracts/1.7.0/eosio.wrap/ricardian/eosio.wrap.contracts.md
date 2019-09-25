@@ -4,7 +4,7 @@
 spec_version: "0.2.0"
 title: Privileged Execute
 summary: '{{nowrap executer}} executes a transaction while bypassing authority checks'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{executer}} executes the following transaction while bypassing authority checks:

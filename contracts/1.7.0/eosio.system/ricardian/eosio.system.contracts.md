@@ -4,7 +4,7 @@
 spec_version: "0.2.0"
 title: Activate Protocol Feature
 summary: 'Activate protocol feature {{nowrap feature_digest}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} activates the protocol feature with a digest of {{feature_digest}}.
@@ -15,7 +15,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Bid On a Premium Account Name
 summary: '{{nowrap bidder}} bids on the premium account name {{nowrap newname}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{bidder}} bids {{bid}} on an auction to own the premium account name {{newname}}.
@@ -43,7 +43,7 @@ Be aware that the condition to close the auction described above are sufficient 
 spec_version: "0.2.0"
 title: Claim Refund on Name Bid
 summary: 'Claim refund on {{nowrap newname}} bid'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{bidder}} claims refund on {{newname}} bid after being outbid by someone else.
@@ -54,7 +54,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Buy RAM
 summary: '{{nowrap payer}} buys RAM on behalf of {{nowrap receiver}} by paying {{nowrap quant}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
 ---
 
 {{payer}} buys RAM on behalf of {{receiver}} by paying {{quant}}. This transaction will incur a 0.5% fee out of {{quant}} and the amount of RAM delivered will depend on market rates.
@@ -65,7 +65,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Buy RAM
 summary: '{{nowrap payer}} buys {{nowrap bytes}} bytes of RAM on behalf of {{nowrap receiver}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
 ---
 
 {{payer}} buys approximately {{bytes}} bytes of RAM on behalf of {{receiver}} by paying market rates for RAM. This transaction will incur a 0.5% fee and the cost will depend on market rates.
@@ -76,7 +76,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Buy REX Tokens
 summary: '{{nowrap from}} buys REX tokens in exchange for {{nowrap amount}} and his vote stake increases by {{nowrap amount}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{amount}} is taken out of {{from}}’s REX fund and used to purchase REX tokens at the current market exchange rate. In order for the action to succeed, {{from}} must have voted for a proxy or at least 21 block producers. {{amount}} is added to {{from}}’s vote stake.
@@ -89,7 +89,7 @@ A sell order of the purchased amount can only be initiated after waiting for the
 spec_version: "0.2.0"
 title: Cancel Delayed Transaction
 summary: '{{nowrap canceling_auth.actor}} cancels a delayed transaction'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{canceling_auth.actor}} cancels the delayed transaction with id {{trx_id}}.
@@ -100,7 +100,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Claim Block Producer Rewards
 summary: '{{nowrap owner}} claims block and vote rewards'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{owner}} claims block and vote rewards from the system.
@@ -111,7 +111,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Cleanup Unused REX Data
 summary: 'Delete REX related DB entries and free associated RAM'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 Delete REX related DB entries and free associated RAM for {{owner}}.
@@ -124,7 +124,7 @@ To fully delete all REX related DB entries, {{owner}} must ensure that their REX
 spec_version: "0.2.0"
 title: Cancel Scheduled REX Sell Order
 summary: '{{nowrap owner}} cancels a scheduled sell order if not yet filled'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{owner}} cancels their open sell order.
@@ -135,7 +135,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Consolidate REX Maturity Buckets Into One
 summary: 'Consolidate REX maturity buckets into one'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 Consolidate REX maturity buckets into one bucket that {{owner}} will not be able to sell until 4 to 5 days later.
@@ -146,7 +146,7 @@ Consolidate REX maturity buckets into one bucket that {{owner}} will not be able
 spec_version: "0.2.0"
 title: Withdraw from the Fund of a Specific CPU Loan
 summary: '{{nowrap from}} transfers {{nowrap amount}} from the fund of CPU loan number {{nowrap loan_num}} back to REX fund'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{from}} transfers {{amount}} from the fund of CPU loan number {{loan_num}} back to REX fund.
@@ -157,7 +157,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Withdraw from the Fund of a Specific NET Loan
 summary: '{{nowrap from}} transfers {{nowrap amount}} from the fund of NET loan number {{nowrap loan_num}} back to REX fund'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{from}} transfers {{amount}} from the fund of NET loan number {{loan_num}} back to REX fund.
@@ -168,7 +168,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Stake Tokens for NET and/or CPU
 summary: 'Stake tokens for NET and/or CPU and optionally transfer ownership'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
 ---
 
 {{#if transfer}} {{from}} stakes on behalf of {{receiver}} {{stake_net_quantity}} for NET bandwidth and {{stake_cpu_quantity}} for CPU bandwidth.
@@ -186,7 +186,7 @@ The sum of these two quantities add to the vote weight of {{from}}.
 spec_version: "0.2.0"
 title: Delete Account Permission
 summary: 'Delete the {{nowrap permission}} permission of {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Delete the {{permission}} permission of {{account}}.
@@ -197,7 +197,7 @@ Delete the {{permission}} permission of {{account}}.
 spec_version: "0.2.0"
 title: Deposit Into REX Fund
 summary: 'Add to {{nowrap owner}}’s REX fund by transferring {{nowrap amount}} from {{nowrap owner}}’s liquid balance'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 Transfer {{amount}} from {{owner}}’s liquid balance to {{owner}}’s REX fund. All proceeds and expenses related to REX are added to or taken out of this fund.
@@ -208,7 +208,7 @@ Transfer {{amount}} from {{owner}}’s liquid balance to {{owner}}’s REX fund.
 spec_version: "0.2.0"
 title: Deposit into the Fund of a Specific CPU Loan
 summary: '{{nowrap from}} funds a CPU loan'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{from}} transfers {{payment}} from REX fund to the fund of CPU loan number {{loan_num}} in order to be used in loan renewal at expiry. {{from}} can withdraw the total balance of the loan fund at any time.
@@ -219,7 +219,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Deposit into the Fund of a Specific NET Loan
 summary: '{{nowrap from}} funds a NET loan'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{from}} transfers {{payment}} from REX fund to the fund of NET loan number {{loan_num}} in order to be used in loan renewal at expiry. {{from}} can withdraw the total balance of the loan fund at any time.
@@ -230,7 +230,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Initialize System Contract
 summary: 'Initialize system contract'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 Initialize system contract. The core token symbol will be set to {{core}}.
@@ -241,7 +241,7 @@ Initialize system contract. The core token symbol will be set to {{core}}.
 spec_version: "0.2.0"
 title: Link Action to Permission
 summary: '{{nowrap account}} sets the minimum required permission for the {{#if type}}{{nowrap type}} action of the{{/if}} {{nowrap code}} contract to {{nowrap requirement}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{account}} sets the minimum required permission for the {{#if type}}{{type}} action of the{{/if}} {{code}} contract to {{requirement}}.
@@ -254,7 +254,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Create New Account
 summary: '{{nowrap creator}} creates a new account with the name {{nowrap name}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{creator}} creates a new account with the name {{name}} and the following permissions:
@@ -271,7 +271,7 @@ active permission with authority:
 spec_version: "0.2.0"
 title: Unlock REX Tokens
 summary: '{{nowrap owner}} unlocks REX Tokens'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{owner}} unlocks {{rex}} by moving it out of the REX savings bucket. The unlocked REX tokens cannot be sold until 4 to 5 days later.
@@ -282,7 +282,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Lock REX Tokens
 summary: '{{nowrap owner}} locks REX Tokens'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{owner}} locks {{rex}} by moving it into the REX savings bucket. The locked REX tokens cannot be sold directly and will have to be unlocked explicitly before selling.
@@ -293,7 +293,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Claim Unstaked Tokens
 summary: 'Return previously unstaked tokens to {{nowrap owner}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Return previously unstaked tokens to {{owner}} after the unstaking period has elapsed.
@@ -304,7 +304,7 @@ Return previously unstaked tokens to {{owner}} after the unstaking period has el
 spec_version: "0.2.0"
 title: Register as a Block Producer Candidate
 summary: 'Register {{nowrap producer}} account as a block producer candidate'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/voting.png#db28cd3db6e62d4509af3644ce7d377329482a14bb4bfaca2aa5f1400d8e8a84
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/voting.png#db28cd3db6e62d4509af3644ce7d377329482a14bb4bfaca2aa5f1400d8e8a84
 ---
 
 Register {{producer}} account as a block producer candidate.
@@ -317,7 +317,7 @@ Register {{producer}} account as a block producer candidate.
 spec_version: "0.2.0"
 title: Register/unregister as a Proxy
 summary: 'Register/unregister {{nowrap proxy}} as a proxy account'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/voting.png#db28cd3db6e62d4509af3644ce7d377329482a14bb4bfaca2aa5f1400d8e8a84
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/voting.png#db28cd3db6e62d4509af3644ce7d377329482a14bb4bfaca2aa5f1400d8e8a84
 ---
 
 {{#if isproxy}}
@@ -332,7 +332,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Rent CPU Bandwidth for 30 Days
 summary: '{{nowrap from}} pays {{nowrap loan_payment}} to rent CPU bandwidth for {{nowrap receiver}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{from}} pays {{loan_payment}} to rent CPU bandwidth on behalf of {{receiver}} for a period of 30 days.
@@ -347,7 +347,7 @@ At expiration, if the loan has less funds than {{loan_payment}}, it is closed an
 spec_version: "0.2.0"
 title: Rent NET Bandwidth for 30 Days
 summary: '{{nowrap from}} pays {{nowrap loan_payment}} to rent NET bandwidth for {{nowrap receiver}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{from}} pays {{loan_payment}} to rent NET bandwidth on behalf of {{receiver}} for a period of 30 days.
@@ -362,7 +362,7 @@ At expiration, if the loan has less funds than {{loan_payment}}, it is closed an
 spec_version: "0.2.0"
 title: Perform REX Maintenance
 summary: 'Process sell orders and expired loans'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 Performs REX maintenance by processing a maximum of {{max}} REX sell orders and expired loans. Any account can execute this action.
@@ -373,7 +373,7 @@ Performs REX maintenance by processing a maximum of {{max}} REX sell orders and 
 spec_version: "0.2.0"
 title: Forcibly Unregister a Block Producer Candidate
 summary: '{{nowrap producer}} is unregistered as a block producer candidate'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} unregisters {{producer}} as a block producer candidate. {{producer}} account will retain its votes and those votes can change based on voter stake changes or votes removed from {{producer}}. However new voters will not be able to vote for {{producer}} while it remains unregistered.
@@ -384,7 +384,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Sell RAM From Account
 summary: 'Sell unused RAM from {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
 ---
 
 Sell {{bytes}} bytes of unused RAM from account {{account}} at market price. This transaction will incur a 0.5% fee on the proceeds which depend on market rates.
@@ -395,7 +395,7 @@ Sell {{bytes}} bytes of unused RAM from account {{account}} at market price. Thi
 spec_version: "0.2.0"
 title: Sell REX Tokens in Exchange for EOS
 summary: '{{nowrap from}} sells {{nowrap rex}} tokens'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{from}} initiates a sell order to sell {{rex}} tokens at the market exchange rate during the time at which the order is ultimately executed. If {{from}} already has an open sell order in the sell queue, {{rex}} will be added to the amount of the sell order without change the position of the sell order within the queue. Once the sell order is executed, proceeds are added to {{from}}’s REX fund, the value of sold REX tokens is deducted from {{from}}’s vote stake, and votes are updated accordingly.
@@ -408,7 +408,7 @@ Depending on the market conditions, it may not be possible to fill the entire se
 spec_version: "0.2.0"
 title: Deploy Contract ABI
 summary: 'Deploy contract ABI on account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Deploy the ABI file associated with the contract on account {{account}}.
@@ -419,7 +419,7 @@ Deploy the ABI file associated with the contract on account {{account}}.
 spec_version: "0.2.0"
 title: Explicitly Manage the CPU Quota of Account
 summary: 'Explicitly manage the CPU bandwidth quota of account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{#if_has_value cpu_weight}}
@@ -436,7 +436,7 @@ Unpin the CPU bandwidth quota of account {{account}}. The CPU bandwidth quota of
 spec_version: "0.2.0"
 title: Explicitly Manage the NET Quota of Account
 summary: 'Explicitly manage the NET bandwidth quota of account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{#if_has_value net_weight}}
@@ -453,7 +453,7 @@ Unpin the NET bandwidth quota of account {{account}}. The NET bandwidth quota of
 spec_version: "0.2.0"
 title: Explicitly Manage the RAM Quota of Account
 summary: 'Explicitly manage the RAM quota of account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{#if_has_value ram_bytes}}
@@ -470,7 +470,7 @@ Unpin the RAM quota of account {{account}}. The RAM quota of {{account}} will be
 spec_version: "0.2.0"
 title: Adjust Resource Limits of Account
 summary: 'Adjust resource limits of account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} updates {{account}}’s resource limits to have a RAM quota of {{ram_bytes}} bytes, a NET bandwidth quota of {{net_weight}} and a CPU bandwidth quota of {{cpu_weight}}.
@@ -481,7 +481,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Deploy Contract Code
 summary: 'Deploy contract code on account {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Deploy compiled contract code to the account {{account}}.
@@ -492,7 +492,7 @@ Deploy compiled contract code to the account {{account}}.
 spec_version: "0.2.0"
 title: Set System Parameters
 summary: 'Set System Parameters'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} sets system parameters to:
@@ -504,7 +504,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Make an Account Privileged or Unprivileged
 summary: '{{#if is_priv}}Make {{nowrap account}} privileged{{else}}Remove privileged status of {{nowrap account}}{{/if}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{#if is_priv}}
@@ -519,7 +519,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Configure the Available RAM
 summary: 'Configure the available RAM'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} configures the available RAM to {{max_ram_size}} bytes.
@@ -530,7 +530,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Set the Rate of Increase of RAM
 summary: 'Set the rate of increase of RAM per block'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} sets the rate of increase of RAM to {{bytes_per_block}} bytes/block.
@@ -541,7 +541,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Adjust REX Pool Virtual Balance
 summary: 'Adjust REX Pool Virtual Balance'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} adjusts REX loan rate by setting REX pool virtual balance to {{balance}}. No token transfer or issue is executed in this action.
@@ -552,7 +552,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Unstake Tokens for NET and/or CPU
 summary: 'Unstake tokens for NET and/or CPU from {{nowrap receiver}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/resource.png#3830f1ce8cb07f7757dbcf383b1ec1b11914ac34a1f9d8b065f07600fa9dac19
 ---
 
 {{from}} unstakes from {{receiver}} {{unstake_net_quantity}} for NET bandwidth and {{unstake_cpu_quantity}} for CPU bandwidth.
@@ -565,7 +565,7 @@ The sum of these two quantities will be removed from the vote weight of {{receiv
 spec_version: "0.2.0"
 title: Unlink Action from Permission
 summary: '{{nowrap account}} unsets the minimum required permission for the {{#if type}}{{nowrap type}} action of the{{/if}} {{nowrap code}} contract'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 {{account}} removes the association between the {{#if type}}{{type}} action of the{{/if}} {{code}} contract and its minimum required permission.
@@ -578,7 +578,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Unregister as a Block Producer Candidate
 summary: '{{nowrap producer}} unregisters as a block producer candidate'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/voting.png#db28cd3db6e62d4509af3644ce7d377329482a14bb4bfaca2aa5f1400d8e8a84
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/voting.png#db28cd3db6e62d4509af3644ce7d377329482a14bb4bfaca2aa5f1400d8e8a84
 ---
 
 {{producer}} unregisters as a block producer candidate. {{producer}} account will retain its votes and those votes can change based on voter stake changes or votes removed from {{producer}}. However new voters will not be able to vote for {{producer}} while it remains unregistered.
@@ -589,7 +589,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Buy REX Tokens Using Staked Tokens
 summary: '{{nowrap owner}} buys REX tokens in exchange for tokens currently staked to NET and/or CPU'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 {{from_net}} and {{from_cpu}} are withdrawn from {{receiver}}’s NET and CPU bandwidths respectively. These funds are used to purchase REX tokens at the current market exchange rate. In order for the action to succeed, {{owner}} must have voted for a proxy or at least 21 block producers.
@@ -602,7 +602,7 @@ A sell order of the purchased amount can only be initiated after waiting for the
 spec_version: "0.2.0"
 title: Modify Account Permission
 summary: 'Add or update the {{nowrap permission}} permission of {{nowrap account}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/account.png#3d55a2fc3a5c20b456f5657faf666bc25ffd06f4836c5e8256f741149b0b294f
 ---
 
 Modify, and create if necessary, the {{permission}} permission of {{account}} to have a parent permission of {{parent}} and the following authority:
@@ -614,7 +614,7 @@ Modify, and create if necessary, the {{permission}} permission of {{account}} to
 spec_version: "0.2.0"
 title: Update REX Owner Vote Weight
 summary: 'Update vote weight to current value of held REX tokens'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 Update vote weight of {{owner}} account to current value of held REX tokens.
@@ -625,7 +625,7 @@ Update vote weight of {{owner}} account to current value of held REX tokens.
 spec_version: "0.2.0"
 title: Update System Contract Revision Number
 summary: 'Update system contract revision number'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/admin.png#9bf1cec664863bd6aaac0f814b235f8799fb02c850e9aa5da34e8a004bd6518e
 ---
 
 {{$action.account}} advances the system contract revision number to {{revision}}.
@@ -636,7 +636,7 @@ icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/
 spec_version: "0.2.0"
 title: Vote for Block Producers
 summary: '{{nowrap voter}} votes for {{#if proxy}}the proxy {{nowrap proxy}}{{else}}up to 30 block producer candidates{{/if}}'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/voting.png#db28cd3db6e62d4509af3644ce7d377329482a14bb4bfaca2aa5f1400d8e8a84
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/voting.png#db28cd3db6e62d4509af3644ce7d377329482a14bb4bfaca2aa5f1400d8e8a84
 ---
 
 {{#if proxy}}
@@ -658,7 +658,7 @@ At the time of voting the full weight of voter’s staked (CPU + NET) tokens wil
 spec_version: "0.2.0"
 title: Withdraw from REX Fund
 summary: 'Withdraw {{nowrap amount}} from {{nowrap owner}}’s REX fund by transferring to {{owner}}’s liquid balance'
-icon: https://raw.githubusercontent.com/CryptoKylin/eosio-ricardian-icons/0.2.0/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
+icon: https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons/rex.png#d229837fa62a464b9c71e06060aa86179adf0b3f4e3b8c4f9702f4f4b0c340a8
 ---
 
 Withdraws {{amount}} from {{owner}}’s REX fund and transfer them to {{owner}}’s liquid balance.
