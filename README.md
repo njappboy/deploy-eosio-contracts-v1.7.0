@@ -125,8 +125,7 @@ Use the same approach above to generate transaction payload for eosio.token and 
 
 ### 2. Prepare Block Producer permission list
 
-We have included top 30 BPs + some highly recoginized technical BPs among the community in our proposals, you can find the full list here in file `producer_perm.json`.
-
+We have included top 30 BPs + 16 highly recoginized technical/governace BPs among the community in our proposals, you can find the full list in file `producer_perm.json`.
 
 ### 3. Propose on EOS Mainnet
 
