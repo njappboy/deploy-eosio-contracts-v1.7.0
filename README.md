@@ -12,18 +12,18 @@ We use [eosio.cdt 1.6.2](https://github.com/EOSIO/eosio.cdt/tree/v1.6.1) and [eo
 
 eosio.contracts `v.1.7.0` introduced [ricardian-spec v0.2.0](https://github.com/EOSIO/ricardian-spec/tree/v0.2.0) which adds icon support in action ricardian clause. Along with this release, BlockOne team has also provided default icons for system contract actions under MIT license. In order to build an abi with accessible action icon url, you need to specify ICON_BASE_URL in contracts/CMakeLists.txt. 
 
-in this case, we use `https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons` as ICON_BASE_URL to build. 
+in this case, we use `https://raw.githubusercontent.com/cryptokylin/eosio.contracts/v1.7.0/contracts/icons` as ICON_BASE_URL to build. [cryptokylin/eosio.contracts](https://github.com/cryptokylin/eosio.contracts/) is a fork of [eosio/eosio.contracts](https://github.com/eosio/eosio.contracts) maintained by CryptoKylin Testnet Developer Group.
 
 
 ### 2. Prepare Ricardian Clauses
 
-Prepare ricardian caluses to make sure regproducer RC and EUA matches the ones on EOS Mainnet.
+Prepare ricardian caluses to make sure to use the same regproducer RC and EUA as on EOS Mainnet.
 
-The EUA section is taken from [EOS-Mainnet governance repo](https://github.com/EOS-Mainnet/governance/blob/master/eosio.system/eosio.system-clause-constitution-rc.md) and regproducer RC from [EOS42/regproduceupodate](https://github.com/eos42/regproduceupodate) 
+The EUA can be found in [EOS-Mainnet governance repo](https://github.com/EOS-Mainnet/governance/blob/master/eosio.system/eosio.system-clause-constitution-rc.md) and regproducer RC from [EOS42/regproduceupodate](https://github.com/eos42/regproduceupodate)
 
-For other actions' RC, v1.7.0 release has a slight wording change, for details please refer to: https://github.com/EOSIO/eosio.contracts/tree/v1.7.0
+For other actions' RC, v1.7.0 release has a built in RC with slight wording change comparing to current EOS Mainnet RC, for details please refer to: https://github.com/EOSIO/eosio.contracts/tree/v1.7.0
 
-You can find the v1.7.0 contract with RC updated here: [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/mainnet/v1.7.0/) Please verify it accordingly.
+You can find the v1.7.0 contract with regproducer RC and EUA updated here: [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/mainnet/v1.7.0/) Please verify it accordingly.
 
 
 ### 3. Build and verify checksums:
@@ -38,7 +38,7 @@ clone [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/mainnet/v1.7
 
 You can verify the build result under `build` folder once build succeed.
 
-We have put our build under `contracts/1.7.0` for your review, which is also used to deploy on EOS Mainnet.
+We have put our build under `contracts/1.7.0` for your review, which is used to deploy on EOS Mainnet.
 
 Here are the checksums we got, please verify:
 
@@ -75,7 +75,7 @@ SHA256(contracts/1.7.0/eosio.msig/eosio.msig.abi)= b9192fe8ab8d7851b3f5ff3d2efea
 
 ## Deploy eosio.system/eosio.token/eosio.msig contracts
 
-### 1. Prepare transaction
+### 1. Prepare transaction payload
 
 Take eosio.system for example:
 
@@ -121,7 +121,7 @@ Update expiration to a future time, set `ref_block_num` and `ref_block_prefix` t
   "context_free_data": []
 }
 ```
-Use the same approach above to generate transaction payload for eosio.token and eosio.msig. Don't forget to use eosio.token and eosio.msig for authority instead.
+Use the same approach above to generate transaction payload for `eosio.token` and `eosio.msig`. Don't forget to use `eosio.token` and `eosio.msig` for authorization instead.
 
 ### 2. Prepare Block Producer permission list
 
@@ -129,15 +129,15 @@ We have included top 30 BPs + 16 highly recoginized technical/governace BPs amon
 
 ### 3. Propose on EOS Mainnet
 
-take eosio.system for example:
+Take `eosio.system` for example:
 
 ```
 cleos -u https://api.eoslaomao.com multisig propose_trx producer_perm.json 1sevensys producer_perm.json deploy_system.json eoslaomaocom
 ```
 
-We have proposed to deplpy eosio.system, eosio.token and eosio.msig contracts on EOS Mainnet, please review and verify.
+We have proposed to deplpy `eosio.system`, `eosio.token` and `eosio.msig` contracts on EOS Mainnet, please review and verify.
 
-The payload used for the following proposals can be found in `deploy_system.json`, `deploy_token.json` and `deploy_msig.json`.
+The payload used for the these proposals can be found in `deploy_system.json`, `deploy_token.json` and `deploy_msig.json`, please review and verify.
 
 1. Proposal to deploy eosio.system:
 
@@ -163,3 +163,6 @@ cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1seventoken
 ```
 cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1sevenmsig
 ```
+
+
+EOSLaoMao Team.
