@@ -138,6 +138,8 @@ cleos -u https://api.eoslaomao.com multisig propose_trx producer_perm.json 1seve
 
 We have proposed to deplpy eosio.system, eosio.token and eosio.msig contracts on EOS Mainnet, please review and verify.
 
+The payload used for the following proposals can be found in `deploy_system.json`, `deploy_token.json` and `deploy_msig.json`.
+
 1. Proposal to deploy eosio.system:
 
 [https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys](https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys)
