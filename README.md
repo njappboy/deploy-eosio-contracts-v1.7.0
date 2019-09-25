@@ -141,7 +141,7 @@ The payload used for the following proposals can be found in `deploy_system.json
 
 1. Proposal to deploy eosio.system:
 
-[https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys](https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevensys)
+[https://bloks.io/msig/eoslaomaocom/1sevensys](https://bloks.io/msig/eoslaomaocom/1sevensys)
 
 ```
 cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1sevensys
@@ -150,7 +150,7 @@ cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1sevensys
 
 2. Proposal to deploy eosio.token:
 
-[https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1seventoken](https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1seventoken)
+[https://bloks.io/msig/eoslaomaocom/1seventoken](https://bloks.io/msig/eoslaomaocom/1seventoken)
 
 ```
 cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1seventoken
@@ -158,7 +158,7 @@ cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1seventoken
 
 3. Proposal to deploy eosio.msig:
 
-[https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevenmsig](https://eosx.io/tools/msig/proposal?proposer=eoslaomaocom&name=1sevenmsig)
+[https://bloks.io/msig/eoslaomaocom/1sevenmsig](https://bloks.io/msig/eoslaomaocom/1sevenmsig)
 
 ```
 cleos -u https://api.eoslaomao.com multisig review eoslaomaocom 1sevenmsig
