@@ -5,7 +5,7 @@
 ## Prerequisites
 
 
-We use [eosio.cdt 1.6.2](https://github.com/EOSIO/eosio.cdt/tree/v1.6.1) and [eosio 1.8.3](https://github.com/EOSIO/eos/tree/v1.8.3) to build [eosio.contracts v1.7.0](https://github.com/EOSIO/eosio.contracts/tree/v1.7.0) smart contract.
+We use [eosio.cdt 1.6.2](https://github.com/EOSIO/eosio.cdt/tree/v1.6.2) and [eosio 1.8.3](https://github.com/EOSIO/eos/tree/v1.8.3) to build [eosio.contracts v1.7.0](https://github.com/EOSIO/eosio.contracts/tree/v1.7.0) smart contract.
 
 
 ### 1. Prepare ICON_BASE_URL to serve action logos
@@ -23,14 +23,14 @@ The EUA can be found in [EOS-Mainnet governance repo](https://github.com/EOS-Mai
 
 For other actions' RC, v1.7.0 release has a built in RC with slight wording change comparing to current EOS Mainnet RC, for details please refer to: https://github.com/EOSIO/eosio.contracts/tree/v1.7.0
 
-You can find the v1.7.0 contract with regproducer RC and EUA updated here: [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/mainnet/v1.7.0/) Please verify it accordingly.
+You can find the v1.7.0 contract with regproducer RC and EUA updated here in branch [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/tree/mainnet/v1.7.0) Please verify it accordingly.
 
 
 ### 3. Build and verify checksums:
 
 #### Build:
 
-clone [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/mainnet/v1.7.0/) and build:
+clone branch [mainnet/v1.7.0](https://github.com/EOSLaoMao/eosio.contracts/tree/mainnet/v1.7.0) and build:
 
 `./build.sh -c [eosio.cdt Path] -e [eosio Path]`
 
