@@ -104,7 +104,7 @@ Note that `expiration`, `ref_block_num` and `ref_block_prefix` has been updated,
 
 Now lets sign this transfer payload using both PAYER and BUYER's private key.
 
-Sign with PAYER:
+Sign with PAYER's private key:
 
 ```
 cleos sign trans.json -k PRIVATE_KEY_OF_PAYER
@@ -199,9 +199,9 @@ cleos push transaction -s trans.json
 
 If `expiration` and both signatures are valid, this transaction should succeed with a transaction id returned.
 
-### 4. check resources
+### 4. Check resource usage
 
-Now lets check new resource state:
+Now lets log new resource state:
 
 
 ```
@@ -209,7 +209,7 @@ cleos get account USER > after
 cleos get account PAYER >> after
 ```
 
-check the diff between `before` and `after`:
+Check the diff between `before` and `after`:
 
 ```
 diff before after
