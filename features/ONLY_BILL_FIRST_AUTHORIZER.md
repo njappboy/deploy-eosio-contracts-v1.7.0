@@ -1,27 +1,27 @@
 # ONLY_BILL_FIRST_AUTHORIZER feature test report
 
-Along with EOSIO v1.8 release, it introduced a set of protocal features that can be acitvated individually. You can check details here: [https://github.com/EOSIO/eos/releases/tag/v1.8.0](https://github.com/EOSIO/eos/releases/tag/v1.8.0)
+Along with v1.8 release, EOSIO introduced a set of protocal features that can be acitvated individually. You can check details here: [https://github.com/EOSIO/eos/releases/tag/v1.8.0](https://github.com/EOSIO/eos/releases/tag/v1.8.0)
 
-This article is a test report on one feature of them: ONLY_BILL_FIRST_AUTHORIZER
+This article is a test report on one specific feature of them: ONLY_BILL_FIRST_AUTHORIZER
 
-NOTE: please make sure to test it on a `ONLY_BILL_FIRST_AUTHORIZER` EOSIO chain.
+NOTE: please make sure to test it on a `ONLY_BILL_FIRST_AUTHORIZER` activated EOSIO network.
 
 
 ## Brief
 
-As decribed [here](https://github.com/EOSIO/eos/pull/7089) ONLY_BILL_FIRST_AUTHORIZER, when activated, only bills CPU and NET to the first authorizer of the transaction instead of all authorizers.
+As decribed [here](https://github.com/EOSIO/eos/pull/7089), `ONLY_BILL_FIRST_AUTHORIZER`, when activated, the network will only bill CPU and NET to the first authorizer of the transaction instead of all authorizers.
 
-What's the point of this feature? As we know EOSIO blockchains charge users NET and CPU costs on transactions like most other blackchains do. Although these costs are transient, it still affect user experiences in a big way. With ONLY_BILL_FIRST_AUTHORIZER, dapp developers can cover these costs on be-half of their users by setup a cosigning service to put their signature always on top in each of their users transaction.
+What's the point of this feature? As we know EOSIO blockchains charge users NET and CPU costs on transactions like most other blackchains do. Although these costs are transient, it still affect user experiences in a big way. With `ONLY_BILL_FIRST_AUTHORIZER` activated, dApp developers can cover these costs on behalf of their users by setup a cosigning service to put their signature always on top in each of their users transaction.
 
-As you can see, ONLY_BILL_FIRST_AUTHORIZER is a partial solution, a more complete solution is proposed here: [https://github.com/EOSIO/spec-repo/blob/master/esr_contract_pays.md](https://github.com/EOSIO/spec-repo/blob/master/esr_contract_pays.md)
-
-
-## Test ONLY_BILL_FIRST_AUTHORIZER 
-
-To test this feature, you just need to sign the transaction using PAYER's key and put this signature on top of any other signatures.
+As you can see, `ONLY_BILL_FIRST_AUTHORIZER` is a partial solution, a more complete solution is proposed here: [https://github.com/EOSIO/spec-repo/blob/master/esr_contract_pays.md](https://github.com/EOSIO/spec-repo/blob/master/esr_contract_pays.md)
 
 
-In our case, we have user's EOS account USER and payer's EOS account PAYER. And we simply sign a transfer action to test it.
+## How to test ONLY_BILL_FIRST_AUTHORIZER feature
+
+To test this feature, you just need to sign the transaction using PAYER's key and put this signature on top of any other required signatures.
+
+
+In our case, we have user's EOS account `USER` and payer's EOS account `PAYER`. And we simply sign a transfer action to test it.
 
 
 ### 1. Generate transfer transaction payload
@@ -62,9 +62,9 @@ Note that `signatures` is empty cause we used `-s` to skip signing.
 
 Next:
 
-a. Change `expiration` to a future time within 1 hour, like 20 minutes later.
-b. Add `PAYER` to `authorization` inside `actions` as the first authorizer.
-c. Set both `ref_block_num` and `ref_block_prefix` to 0;
+1. Change `expiration` to a future time within 1 hour, e.g. 20 minutes later.
+2. Add `PAYER` to `authorization` inside `actions` as the first authorizer.
+3. Set both `ref_block_num` and `ref_block_prefix` to 0;
 
 You will get a new `trans.json` like this:
 
@@ -143,11 +143,11 @@ You will get an output similar to this:
 }
 ```
 
-Notice that signature generated in `signatures`: `SIG_K1_Jx4oc4Dt4tTRKJfx25wQPRnLnpU24kHAhaEQHoQkRt2RMyxP2Dycnm7xcuPCHmkoGSDDNKjFGcNQ4pNgi71pnx`, this is the signature generated using PAYER's private key.
+Note that signature generated in `signatures`: `SIG_K1_Jx4oc4Dt4tTRKJfx25wQPRnLnpU24kHAhaEQHoQkRt2RMyxP2Dycnm7xcuPCHmkoGSDDNKjFGcNQ4pNgi71pnx`, this is the signature generated using PAYER's private key.
 
 You can generate the USER's signaure using the same approach.
 
-Put these two signatures back to `trans.json`, you will get a `trans.json` with two valid signatures, something like this:
+Put these two signatures back to `trans.json`, you will get a new `trans.json` with two valid signatures, similar to this:
 
 ```
 {
@@ -184,7 +184,7 @@ Put these two signatures back to `trans.json`, you will get a `trans.json` with 
 
 ### 3. push transfer transaction payload
 
-Before you push this transaction, please log the current resource state of both USER and PAYER account:
+Before you push this transaction, please log the current resource state of both USER and PAYER account for later usage:
 
 ```
 cleos get account USER > before
@@ -215,4 +215,4 @@ check the diff between `before` and `after`:
 diff before after
 ```
 
-You should be able to see that PAYER's NET and CPU usage raised, but USER's NET and CPU usage is the same.
+You should be able to see that PAYER's NET and CPU usage accumulated, while USER's NET and CPU usage still the same.
