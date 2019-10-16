@@ -10,6 +10,8 @@ EOSLaoMao Team has proposed to activate `ONLY_BILL_FIRST_AUTHORIZER` on EOS Main
 
 We have included top 30 BPs + 16 highly recoginized technical/governace BPs among the community in our proposals, you can find the full list in file `producer_perm.json`
 
+The payload used for this proposal can be found in `features/activate_ONLY_BILL_FIRST_AUTHORIZER.json`
+
 Please review and verify ASAP: [https://bloks.io/msig/eoslaomaocom/onlybill1st](https://bloks.io/msig/eoslaomaocom/onlybill1st)
 
 
