@@ -6,7 +6,7 @@ This article is a test report on one specific feature of them: ONLY_BILL_FIRST_A
 
 NOTE: please make sure to test it on a `ONLY_BILL_FIRST_AUTHORIZER` activated EOSIO network.
 
-# Proposal on EOS Mainnet
+## Proposal on EOS Mainnet
 
 EOSLaoMao Team has proposed to activate `ONLY_BILL_FIRST_AUTHORIZER` on EOS Mainnet.
 
