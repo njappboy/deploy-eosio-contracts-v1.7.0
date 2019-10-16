@@ -6,13 +6,25 @@ This article is a test report on one specific feature of them: ONLY_BILL_FIRST_A
 
 NOTE: please make sure to test it on a `ONLY_BILL_FIRST_AUTHORIZER` activated EOSIO network.
 
+# Proposal on EOS Mainnet
+
 EOSLaoMao Team has proposed to activate `ONLY_BILL_FIRST_AUTHORIZER` on EOS Mainnet.
 
 We have included top 30 BPs + 16 highly recoginized technical/governace BPs among the community in our proposals, you can find the full list in file `producer_perm.json`
 
 The payload used for this proposal can be found in `features/activate_ONLY_BILL_FIRST_AUTHORIZER.json`
 
-Please review and verify ASAP: [https://bloks.io/msig/eoslaomaocom/onlybill1st](https://bloks.io/msig/eoslaomaocom/onlybill1st)
+To verify this payload, simply:
+
+```
+cleos -u https://api.eoslaomao.com push action eosio activate '{"feature_digest": "8ba52fe7a3956c5cd3a656a3174b931d3bb2abb45578befc59f283ecd816a405"}' -p eosio -s -j -d > activate.json
+```
+
+The `feature_digest` of ONLY_BILL_FIRST_AUTHORIZER is `8ba52fe7a3956c5cd3a656a3174b931d3bb2abb45578befc59f283ecd816a405`, it could be found via `curl -X POST http://localhost:8888/v1/producer/get_supported_protocol_features -d '{}'` as [described here](https://developers.eos.io/eosio-nodeos/docs/consensus-protocol-upgrade-process#section-special-notes-to-block-producers)
+
+The only difference between `activate.json` you generated and `features/activate_ONLY_BILL_FIRST_AUTHORIZER.json` should be `expiration`, `ref_block_num` and `ref_block_prefix`.
+
+Please review and verify this proposal ASAP: [https://bloks.io/msig/eoslaomaocom/onlybill1st](https://bloks.io/msig/eoslaomaocom/onlybill1st)
 
 
 ## Brief
