@@ -21,6 +21,18 @@ As decribed [here](https://github.com/EOSIO/eos/pull/7089), `ONLY_BILL_FIRST_AUT
 
 What's the point of this feature? As we know EOSIO blockchains charge users NET and CPU costs on transactions like most other blackchains do. Although these costs are transient, it still affect user experiences in a big way. With `ONLY_BILL_FIRST_AUTHORIZER` activated, dApp developers can cover these costs on behalf of their users by setup a cosigning service to put their signature always on top in each of their users transaction.
 
+Here is a more detailed intro to its behavior, quote from Aarin Hagerty from EOS Mainnet telegram group:
+
+```
+Seems you all have it covered but I will restate and add a bit to hopefully clarify how CPU/NET billing work now and how they will work after activation of ONLY_BILL_FIRST_AUTHORIZER.
+
+As @maoueh mentioned, CPU and NET billing are at the level of a transaction. That means all the time spent executing all original actions in the transaction and any inline actions that descend from them are all billed as CPU to the appropriate billed parties. Furthermore the size of the transaction is billed as NET usage along with any additional dynamic NET usage added during the execution of actions and inline actions within the transaction and this is again billed to the appropriate billed parties.
+
+Prior to ONLY_BILL_FIRST_AUTHORIZER activation, the “billed parties” are the set of accounts that exist as authorizers of the original (top-level) actions in the transaction. So if a transaction includes two actions, a eosio.token::transfer from alice to bob (authorized by, for example, alice@active ) followed by another eosio.token::transfer from charlie to dan (authorized by, for example, charlie@owner ), then the full CPU and NET usage of the transaction (including usage by any notified contracts of the transfers) would be billed to both alice and charlie accounts. To be clear, they would each be billed the same full amount rather than splitting the costs. So if X CPU is charged, then alice is charged X CPU and charlie is charged X CPU; they are not each charged X/2 CPU.
+
+After activation of ONLY_BILL_FIRST_AUTHORIZER, the “billed parties” is a set of exactly one account: the account that is the first authorizer among the sequence of original (top-level) actions. So in the example given above with the two transfers, the billed parties would only include alice and she would be charged X CPU.
+```
+
 As you can see, `ONLY_BILL_FIRST_AUTHORIZER` is a partial solution, a more complete solution is proposed here: [https://github.com/EOSIO/spec-repo/blob/master/esr_contract_pays.md](https://github.com/EOSIO/spec-repo/blob/master/esr_contract_pays.md)
 
 
