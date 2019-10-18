@@ -1,6 +1,6 @@
 # ONLY_BILL_FIRST_AUTHORIZER feature test report
 
-Along with v1.8 release, EOSIO introduced a set of protocal features that can be acitvated individually. You can check details here: [https://github.com/EOSIO/eos/releases/tag/v1.8.0](https://github.com/EOSIO/eos/releases/tag/v1.8.0)
+Along with v1.8 release, EOSIO introduced a set of protocal features that can be activated individually. You can check details here: [https://github.com/EOSIO/eos/releases/tag/v1.8.0](https://github.com/EOSIO/eos/releases/tag/v1.8.0)
 
 This article is a test report on one specific feature of them: ONLY_BILL_FIRST_AUTHORIZER
 
@@ -31,7 +31,7 @@ Please review and verify this proposal ASAP: [https://bloks.io/msig/eoslaomaocom
 
 As decribed [here](https://github.com/EOSIO/eos/pull/7089), `ONLY_BILL_FIRST_AUTHORIZER`, when activated, the network will only bill CPU and NET to the first authorizer of the transaction instead of all authorizers.
 
-What's the point of this feature? As we know EOSIO blockchains charge users NET and CPU costs on transactions like most other blackchains do. Although these costs are transient, it still affect user experiences in a big way. With `ONLY_BILL_FIRST_AUTHORIZER` activated, dApp developers can cover these costs on behalf of their users by setup a cosigning service to put their signature always on top in each of their users transaction.
+What's the point of this feature? As we know EOSIO blockchains charge users NET and CPU costs on transactions like most other blockchains do. Although these costs are transient, it still affects user experiences in a big way. With `ONLY_BILL_FIRST_AUTHORIZER` activated, dApp developers can cover these costs on behalf of their users by setup a cosigning service to put their signature always on top in each of their user's transaction.
 
 Here is a more detailed intro to its behavior, quote from Aarin Hagerty from EOS Mainnet telegram group:
 
