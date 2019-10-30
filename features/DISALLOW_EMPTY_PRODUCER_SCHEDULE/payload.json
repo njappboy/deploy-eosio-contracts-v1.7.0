@@ -1,0 +1,23 @@
+{
+  "expiration": "2019-11-30T04:35:37",
+  "ref_block_num": 0,
+  "ref_block_prefix": 0,
+  "max_net_usage_words": 0,
+  "max_cpu_usage_ms": 0,
+  "delay_sec": 0,
+  "context_free_actions": [],
+  "actions": [{
+      "account": "eosio",
+      "name": "activate",
+      "authorization": [{
+          "actor": "eosio",
+          "permission": "active"
+        }
+      ],
+      "data": "68dcaa34c0517d19666e6b33add67351d8c5f69e999ca1e37931bc410a297428"
+    }
+  ],
+  "transaction_extensions": [],
+  "signatures": [],
+  "context_free_data": []
+}
