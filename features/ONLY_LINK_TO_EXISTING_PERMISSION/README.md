@@ -14,7 +14,7 @@ Nevertheless, it is desirable to fix this bug to avoid the above inconvenience d
 
 ## How to test it
 
-prepare 3 account, namingly A, B and C.
+Prepare 3 accounts, account A, B and C.
 
 First, create a customized permission called 'perma' on account A:
 
@@ -22,13 +22,13 @@ First, create a customized permission called 'perma' on account A:
 cleos set account permission A perma '{"threshold": 1, "keys": [], "accounts": [{"weight": 1, "permission": {"actor": "A", "permission": "active"}}]}' -p A
 ```
 
-For account B, try to set `eosio.token`'s `transfer` actions permission to a non-existing permission B@perma. Note that `perma` is the same permission name on account A.
+For account B, try to set `eosio.token`'s `transfer` action's permission to a non-existing permission B@perma. Note that `perma` is the same permission name on account A.
 
 ```
 cleos set action permission B eosio.token transfer perma -p B
 ```
 
-Before `ONLY_LINK_TO_EXISTING_PERMISSION` activated, the prior operation will be executed successfully due to it only check the existance of permission name without checking the actual account has it or not.
+Before `ONLY_LINK_TO_EXISTING_PERMISSION` activated, the prior operation will be executed successfully due to it only check the existance of permission name without checking the actual account has this permission or not.
 
 After `ONLY_LINK_TO_EXISTING_PERMISSION` activated, try the prior operation on account C, you will get an error like this:
 
@@ -39,7 +39,7 @@ Error Details:
 the owner of the linked permission needs to be the actor of the declared authorization
 ```
 
-Note: After `ONLY_LINK_TO_EXISTING_PERMISSION` activated, accounts have non-existing permission set will not be affected. they only need to create these permissions first before they can use it.
+Note: After `ONLY_LINK_TO_EXISTING_PERMISSION` activated, accounts already have non-existing permissions set before activation will not be affected. They only need to create these permissions first before they can use it.
 
 ## Proposal on EOS Mainnet
 
