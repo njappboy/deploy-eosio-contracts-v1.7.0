@@ -40,4 +40,4 @@ The `feature_digest` of RAM_RESTRICTIONS is `4e7bf348da00a945489b2a681749eb56f5d
 
 The only difference between `activate.json` you generated and `features/RAM_RESTRICTIONS/payload.json` should be `expiration`, `ref_block_num` and `ref_block_prefix`.
 
-Please review and verify this proposal ASAP: [https://bloks.io/msig/eoslaomaocom/fixlinkauth](https://bloks.io/msig/eoslaomaocom/fixlinkauth)
+Please review and verify this proposal ASAP: [https://bloks.io/msig/eoslaomaocom/ramrestrict](https://bloks.io/msig/eoslaomaocom/ramrestrict)
